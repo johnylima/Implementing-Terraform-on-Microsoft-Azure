@@ -6,3 +6,44 @@ az account set --subscription SUB_NAME
 terraform init
 terraform plan -var resource_group_name=main-vnet -out vnet.tfplan
 terraform apply "vnet.tfplan"
+
+
+#####################################################################################################
+
+Using CloudShell
+johny@Azure:~$ mkdir terraform
+johny@Azure:~$ cd terraform
+johny@Azure:~/terraform$ mkdir 1-main-vnet
+johny@Azure:~/terraform$ cd 1-main-vnet
+johny@Azure:~/terraform/1-main-vnet$ az account show
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "",
+  "id": "",
+  "isDefault": true,
+  "managedByTenants": [
+    {
+      "tenantId": ""
+    }
+  ],
+  "name": "", - Subscription
+  "state": "Enabled",
+  "tenantId": "",
+  "user": {
+    "cloudShellID": true,
+    "name": "",
+    "type": "user"
+  }
+}
+
+johny@Azure:~/terraform/1-main-vnet$ terraform version
+johny@Azure:~/terraform/1-main-vnet$ code main.tf
+
+# Copy content file in main.tf for code main.tf
+
+terraform init
+terraform plan -var resource_group_name=main-vnet -out vnet.tfplan
+terraform apply "vnet.tfplan"
+
+################################ CMD VIDEO ##################################################################### 
+
