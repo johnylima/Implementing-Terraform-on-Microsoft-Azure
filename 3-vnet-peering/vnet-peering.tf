@@ -77,7 +77,7 @@ resource "azurerm_role_assignment" "vnet" {
 }
 
 resource "azurerm_virtual_network_peering" "main" {
-  name                      = "main_2_sec"
+  name                      = "main_to_sec"
   resource_group_name       = var.resource_group_name
   virtual_network_name      = module.vnet-main.vnet_name
   remote_virtual_network_id = var.sec_vnet_id
@@ -87,7 +87,7 @@ resource "azurerm_virtual_network_peering" "main" {
 }
 
 resource "azurerm_virtual_network_peering" "sec" {
-  name                      = "sec_2_main"
+  name                      = "sec_to_main"
   resource_group_name       = var.sec_resource_group
   virtual_network_name      = var.sec_vnet_name
   remote_virtual_network_id = module.vnet-main.vnet_id

@@ -32,7 +32,7 @@ variable "sec_resource_group_name" {
 
 variable "location" {
   type    = string
-  default = "eastus"
+  default = "westeurope"
 }
 
 variable "vnet_cidr_range" {
@@ -194,3 +194,4 @@ output "service_principal_client_secret" {
 output "resource_group_name" {
   value = var.sec_resource_group_name
 }
+
