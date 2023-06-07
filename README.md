@@ -1,9 +1,3 @@
-# Implementing-Terraform-on-Microsoft-Azure
-
-Welcome to Implementing Terraform on Microsoft Azure. These exercise files are meant to accompany my course on [Pluralsight](https://app.pluralsight.com/library/courses/implementing-terraform-microsoft-azure/).  The course was developed using version 0.12.10 of Terraform.  As far as I know there are no coming changes that will significantly impact the validity of these exercise files.  But I also don't control all the plug-ins, providers, and modules used by the configurations.
-
-**Update**: Well folks, version 1.0 of Terraform is out and naturally a bunch of stuff has changed since 0.12.10 that broke the configs. Weeeee! I have updated all the configurations to accomodate the changes, but the videos in the course have not yet been updated. What you see in the demo will diverge from what's in the exercise files, but the core concepts remain the same. The current plan is to overhaul the course in the second half of 2021. You can find the changes in the [CHANGELOG](./CHANGELOG.md) file.
-
 ## Using the files
 
 Each folder follows in succession as the course progresses. In some cases, you will need to copy files from one directory to another. Assuming you are following along with the course, when to copy the files and where should be fairly obvious. Many of the folders include a `commands.txt` file that has example commands for that portion of the exercise. Other folders may include an example of a file you'll need, for instance the `9-app-deploy` folder has the `terraform.tfvars.example` file. Simply update the values in the file and rename it to `terraform.tfvars`.
